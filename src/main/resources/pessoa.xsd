@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://example.com/wsdl/types"
+           targetNamespace="http://example.com/wsdl/types"
+           elementFormDefault="qualified">
+
+    <!-- Definição do tipo PessoaRequest -->
+    <xs:complexType name="PessoaRequest">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="cep" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Elemento PessoaRequest -->
+    <xs:element name="PessoaRequest" type="tns:PessoaRequest"/>
+    <!--
+        O tipo 'PessoaRequest' é uma estrutura que possui três elementos:
+        - 'name': representa o nome da pessoa (string).
+        - 'email': representa o email da pessoa (string).
+        - 'cep': representa o CEP (Código de Endereçamento Postal) da pessoa (string).
+
+        O elemento 'PessoaRequest' serve como uma instância XML para representar essas informações.
+    -->
+
+    <!-- Definição do tipo PessoaResponse -->
+    <xs:complexType name="PessoaResponse">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="cep" type="xs:string"/>
+            <xs:element name="localidade" type="xs:string"/>
+            <xs:element name="uf" type="xs:string"/>
+            <xs:element name="ddd" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Elemento PessoaResponse -->
+    <xs:element name="PessoaResponse" type="tns:PessoaResponse"/>
+    <!--
+        O tipo 'PessoaResponse' é uma estrutura que possui seis elementos:
+        - 'name': representa o nome da pessoa (string).
+        - 'email': representa o email da pessoa (string).
+        - 'cep': representa o CEP da pessoa (string).
+        - 'localidade': representa a localidade da pessoa (string).
+        - 'uf': representa a Unidade Federativa (UF) da pessoa (string).
+        - 'ddd': representa o DDD (Discagem Direta a Distância) da pessoa (string).
+
+        O elemento 'PessoaResponse' serve como uma instância XML para representar essas informações.
+    -->
+
+</xs:schema>
